@@ -29,9 +29,6 @@ def csv_to_dict(filename, columns):
                 data[field].append(row[field])
     return dict(data)
 
-dataset = csv_to_dict('disease.csv', columns=['Age', 'Gender', 'BMI', 'Intensity', 'label'])
-data = pd.DataFrame(dataset, columns=['Age', 'Gender', 'BMI', 'Intensity', 'label'])
-
 def calculate_entropy(data):
     """
     fungsi untuk menghitung entropy dari atrribut (Entropy(S)).
@@ -171,10 +168,20 @@ def predict(data_test, tree):
 
 
 if __name__ == "__main__":
+    # Load dataset
+    dataset = csv_to_dict('disease.csv', columns=['Age', 'Gender', 'BMI', 'Intensity', 'label'])
+    data = pd.DataFrame(dataset, columns=['Age', 'Gender', 'BMI', 'Intensity', 'label'])
+    
+    # create tree
     tree = create_tree(data)
+    
+    # data test to predict
     data_test = {'Age':'young', 'Gender':'male'}
+    
+    # prediction
     prediction = predict(data_test, tree)
 
+    # output
     print("Decision Tree:")
     pprint.pprint(tree)
     print("\nPrediksi : ",prediction)
