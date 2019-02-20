@@ -1,0 +1,15 @@
+age,gender,bmi,intensity,label
+young,male,under,high,no
+young,male,under,low,no
+middle,male,under,high,yes
+old,male,medium,high,yes
+old,female,over,high,yes
+old,female,over,low,no
+middle,female,over,low,yes
+young,male,medium,high,no
+young,female,over,high,yes
+old,female,medium,high,yes
+young,female,medium,low,yes
+middle,male,medium,low,yes
+middle,female,under,high,yes
+old,male,medium,low,no
