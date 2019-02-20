@@ -170,10 +170,11 @@ def predict(data_test, tree):
     return prediction
 
 
-tree = create_tree(data)
-data_test = {'Age':'young', 'Gender':'male'}
-prediction = predict(data_test, tree)
+if __name__ == "__main__":
+    tree = create_tree(data)
+    data_test = {'Age':'young', 'Gender':'male'}
+    prediction = predict(data_test, tree)
 
-print("Decision Tree:")
-pprint.pprint(tree)
-print("\nPrediksi : ",prediction)
+    print("Decision Tree:")
+    pprint.pprint(tree)
+    print("\nPrediksi : ",prediction)
