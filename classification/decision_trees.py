@@ -184,4 +184,4 @@ if __name__ == "__main__":
     # output
     print("Decision Tree:")
     pprint.pprint(tree)
-    print("\nPrediksi : ",prediction)
+    print("\nPrediksi "+str(data_test)+" : ",prediction)
